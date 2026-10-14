@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio · Huellas</title>
+    <meta name="description" content="Protectora de animales Huellas: adopta, acoge o colabora.">
+    <style>
+        /* Definición de la paleta de colores*/
+        :root {
+            --azul-principal: #0e5a94;
+            --azul-oscuro: #16213e;
+            --naranja-alerta: #e44d26;
+            --amarillo-foco: #f4be4f;
+            --gris-borde: #e2e5ec;
+            --gris-fondo: #f8fafc;
+            --texto-cuerpo: #334155;
+            --pie-fondo: #0f172a;
+            /* Gris casi negro para contraste AA */
+            --pie-texto: #f8fafc;
+            /* Gris muy claro para contraste AA */
+        }
+
+
+        /* Reset global con box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto' Arial, sans-serif;
+            background-color: var(--gris-fondo);
+            color: var(--texto-cuerpo);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        main,
+        aside {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            color: var(--azul-principal);
+        }
+
+        /* cabecera menu */
+        header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--gris-borde);
+            padding-bottom: 1.5rem;
+        }
+
+        /* Elementos del menú dispuestos en fila y separados */
+        nav ul li {
+            display: inline-block;
+            margin-right: 1.5rem;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--azul-principal);
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* tarjetas*/
+        /* Cambiado a inline-block con ancho fijo para alinear varias por fila */
+        .tarjeta {
+            display: inline-block;
+            vertical-align: top;
+            background-color: #fff;
+            border: 1px solid var(--gris-borde);
+            border-radius: 12px;
+            padding: 1rem;
+            width: 320px;
+            /* Ancho fijo para forzar filas estables */
+            margin-right: 1.5rem;
+            /* Separación lateral entre tarjetas */
+            margin-bottom: 1.5rem;
+            /* Separación inferior por si bajan de fila */
+        }
+
+        .tarjeta img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+
+        .tarjeta-titulo {
+            color: var(--azul-principal);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tarjeta p {
+            margin-bottom: 1rem;
+        }
+
+        /* Componentes específicos de las tarjetas */
+        .etiqueta {
+            background-color: var(--naranja-alerta);
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 0.125rem 0.5rem;
+            border-radius: 999px;
+            margin-right: 0.25rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .btn-primario {
+            background-color: var(--azul-principal);
+            color: #fff;
+        }
+
+        .btn-primario:hover {
+            background-color: var(--azul-oscuro);
+        }
+
+        .btn-primario:focus {
+            outline: 3px solid var(--amarillo-foco);
+            outline-offset: 2px;
+        }
+
+        /* Estilos adicionales para la sección lateral */
+        dl {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--gris-borde);
+            max-width: 400px;
+        }
+
+        dt {
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* pie */
+        footer {
+            background-color: var(--pie-fondo);
+            color: var(--pie-texto);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+
+        /* Enlaces del pie con color claro para cumplir la accesibilidad */
+        footer a {
+            color: #67e8f9;
+            /* Cian luminoso con alto contraste sobre el fondo oscuro */
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/perros/logo.png" alt="Huellas, ir al inicio" width="120" height="120">
+        </a>
+        <h1>Huellas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="paginas/adopta.html">Adopta</a></li>
+                <li><a href="paginas/contacto.html">Contacto</a></li>
+                <li><a href="paginas/nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Quiénes somos</h2>
+            <p>Rescatamos, cuidamos y buscamos hogar a perros y gatos abandonados.</p>
+        </section>
+
+        <section>
+            <h2>Últimos rescates</h2>
+            <article class="tarjeta">
+                <img src="img/perros/toby.jpg" alt="Toby, perro mestizo marrón" width="400" height="300">
+                <h3 class="tarjeta-titulo">Toby</h3>
+                <p><span class="etiqueta">Urgente</span> 2 años · Tamaño mediano</p>
+                <a class="btn btn-primario" href="paginas/adopta.html">Adoptar a Toby</a>
+            </article>
+
+            <article class="tarjeta">
+                <img src="img/perros/luna.jpg" alt="Luna, cachorra blanca con una mancha negra" width="400"
+                    height="300">
+                <h3 class="tarjeta-titulo">Luna</h3>
+                <p><span class="etiqueta">Bebé</span> 8 meses · Tamaño pequeño</p>
+                <!-- Corrección sintáctica realizada aquí -->
+                <a class="btn btn-primario" href="paginas/adopta.html">Adoptar a Luna</a>
+            </article>
+
+            <article class="tarjeta">
+                <img src="img/perros/rocky.jpg" alt="Rocky, perro grande de pelo oscuro" width="400" height="300">
+                <h3 class="tarjeta-titulo">Rocky</h3> <!-- Corrección de texto realizada aquí -->
+                <p>6 años · Tamaño grande</p>
+                <a class="btn btn-primario" href="paginas/adopta.html">Adoptar a Rocky</a>
+                <!-- Corrección de texto realizada aquí -->
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Horario de visitas</h2>
+        <dl>
+            <dt>Martes a viernes</dt>
+            <dd>10:00 – 13:30 y 17:00 – 19:00</dd>
+            <dt>Sábados y domingos</dt>
+            <dd>10:00 – 13:30</dd>
+        </dl>
+    </aside>
+
+    <footer>
+        <p>
+            <a href="mailto:hola@huellas.example">hola@huellas.example</a> ·
+            <a href="tel:+34976000000">976 000 000</a>
+        </p>
+    </footer>
+</body>
+
+</html>

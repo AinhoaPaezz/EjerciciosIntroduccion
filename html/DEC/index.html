@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi pagina</title>
+
+    <script>console.log("Script interno: al inicio de la pagina")</script>
+
+    <script src="normal.js" defer></script>
+
+    <script src="defer.js"></script>
+
+    <script src="async.js" async></script>
+
+    <script>
+        document.write("<p>Hola que hace</p>");
+    </script>
+    <script>
+        window.alert("No puedes entrar");
+    </script>
+    <script>
+        window.alert("No puedes entrar");
+    </script>
+
+</head>
+
+<body>
+    <h1>Hola Mundo</h1>
+    <h2> Un texto cualquiera</h2>
+
+    <!-- Creamos un elemento con un ID para poder identificarlo -->
+    <div id="mensaje">Texto original que desaparecerá</div>
+
+    <!-- El script cambia el contenido del elemento anterior -->
+    <script>
+        document.getElementById("mensaje").innerHTML = "<h1>Adios Mundo</h1>";
+    </script>
+</body>
+
+</html>

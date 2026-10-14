@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 30px;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* TITULOS */
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #444;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+
+/* ENLACES */
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #555;
+    padding: 9px 14px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 4px;
+}
+
+a:hover {
+    background-color: #333;
+}
+
+
+/* FILTROS */
+
+.filtros {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* FORMULARIOS */
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+
+label:has(input[type="checkbox"]) {
+    font-weight: normal;
+}
+
+
+/* BOTONES */
+
+button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+
+/* PLATOS */
+
+.plato {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.plato h3 {
+    color: #333;
+    font-size: 22px;
+}
+
+
+.plato p {
+    margin: 8px 0;
+}
+
+
+.plato ul {
+    padding-left: 25px;
+}
+
+
+/* BOTONES DE LOS PLATOS */
+
+.botones {
+    margin-top: 15px;
+}
+
+
+/* ERRORES */
+
+.errores {
+    background-color: #ffe5e5;
+    color: #a00000;
+    border: 1px solid #ffb3b3;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+
+/* AÑADIR PLATO */
+
+.nuevo {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* LÍNEAS */
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}
+
+
+/* LISTAS */
+
+ul {
+    line-height: 1.8;
+}
