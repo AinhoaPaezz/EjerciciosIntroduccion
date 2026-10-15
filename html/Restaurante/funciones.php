@@ -1,49 +1,42 @@
 <?php
 
-function buscarPlato($platos, $id)
+// 1. Obtiene todos los ingredientes 
+function obtenerIngredientes($conexion)
 {
-    foreach ($platos as $plato) {
+    $sql = "SELECT * FROM ingredientes ORDER BY nombre";
+    $consulta = $conexion->query($sql);
 
-        if ($plato["id"] == $id) {
-
-            return $plato;
-        }
-    }
-
-    return null;
+    return $consulta->fetchAll(PDO::FETCH_ASSOC);
 }
 
-
-function tieneIngrediente($plato, $ingrediente)
+// 2. Busca un plato especfico por su nombre
+function buscarPlato($conexion, $nombrePlato)
 {
-    foreach ($plato["ingredientes"] as $ingredientePlato) {
+    $sql = "SELECT * FROM platos WHERE nombre = ?";
+    $consulta = $conexion->prepare($sql);
+    $consulta->execute([$nombrePlato]);
 
-        if (strtolower($ingredientePlato) == strtolower($ingrediente)) {
-
-            return true;
-        }
-    }
-
-    return false;
+    return $consulta->fetch(PDO::FETCH_ASSOC);
 }
 
-
-function nombreTipo($tipo)
+// 3. Devuelve el nombre 
+function nombreTipo($tipoPlato)
 {
-    switch ($tipo) {
+    return match ($tipoPlato) {
+        'primero' => 'Primer plato',
+        'segundo' => 'Segundo plato',
+        'postre' => 'Postre',
 
-        case "primero":
-            return "Primer plato";
+    };
+}
+// 4. Obtiene la lista de ingredientes que lleva un plato específico
+function obtenerIngredientesDeUnPlato($conexion, $nombrePlato)
+{
+    $sql = "SELECT ingrediente FROM plato_ingrediente WHERE plato = ?";
+    $consulta = $conexion->prepare($sql);
+    $consulta->execute([$nombrePlato]);
 
-        case "segundo":
-            return "Segundo plato";
-
-        case "postre":
-            return "Postre";
-
-        default:
-            return "Sin categoría";
-    }
+    // fetchAll con FETCH_COLUMN te devuelve directamente un array simple de textos: ['Patata', 'Huevo', 'Cebolla']
+    return $consulta->fetchAll(PDO::FETCH_COLUMN);
 }
 
-?>
