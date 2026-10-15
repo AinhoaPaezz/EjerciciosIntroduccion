@@ -6,7 +6,7 @@
     <title>Inicio · Huellas</title>
     <meta name="description" content="Protectora de animales Huellas: adopta, acoge o colabora.">
     <style>
-        /* Definición de la paleta de colores*/
+        /* Definición de la paleta de colores corporativa */
         :root {
             --azul-principal: #0e5a94;
             --azul-oscuro: #16213e;
@@ -168,6 +168,59 @@
             color: #67e8f9;
             /* Cian luminoso con alto contraste sobre el fondo oscuro */
             font-weight: 600;
+        }
+
+        /* Estilos del navegador*/
+        h1 {
+            color: var(--azul-oscuro);
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: var(--azul-principal);
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: var(--azul-oscuro);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            /* Fusión de bordes */
+            margin: 2rem 0;
+            background-color: #ffffff;
+        }
+
+        th,
+        td {
+            border: 1px solid var(--gris-borde);
+            padding: 0.75rem 1rem;
+            /* Padding en celdas */
+            text-align: left;
+        }
+
+        /* Filas alternas con tr:nth-child(even) */
+        tr:nth-child(even) {
+            background-color: var(--gris-fondo);
+        }
+
+        /* Destacar thead con el color primario corporativo */
+        thead {
+            background-color: var(--azul-principal);
+        }
+
+        thead th {
+            color: #ffffff;
+            /* Texto en blanco para contraste */
+        }
+
+        /* Caption en cursiva */
+        caption {
+            font-style: italic;
+            padding: 0.75rem;
+            color: var(--texto-cuerpo);
         }
     </style>
 </head>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "html",
+			"path": "../.."
+		},
+		{
+			"name": "adopta",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
